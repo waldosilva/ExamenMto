@@ -36,6 +36,12 @@ namespace UmvelTest.Api.Controllers
             return await _saleService.Create(sale);
         }
 
-        
+        [HttpPut]
+        public async Task<Sale> Cancel(int salesId)
+        {
+            _logger.LogInformation($"Create Sale");
+            return await _saleService.Cancel(salesId);
+        }
+
     }
 }

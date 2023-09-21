@@ -9,7 +9,9 @@ namespace UmvelTest.Application.Services.Interfaces
         public Task<List<Sale>> GetByRange(DateTime ini,DateTime fin);
 
         public Task<Sale> Create(RequestSale saleInfo);
-        
+
+        public Task<Sale> Cancel(int salesId);
+
 
     }
 }

@@ -54,6 +54,19 @@ namespace UmvelTest.Application.Services
             });
             return sale;
         }
+        public async Task<Sale> Cancel(int saleId)
+        {
+            var sale = await _saleRepo.GetAsync(saleId);
+
+            if (sale!= null)
+            {
+                sale.StatusId = (int)EstatusSale.Cancelado;
+                await UnitOfWork.SaveChangeAsync();
+
+            }
+            return sale;
+        }
+
 
 
     }

@@ -21,6 +21,8 @@ namespace UmvelTest.Entity.Entities
             Date = date;
             Products = new List<Concept>();
         }
-        
+
+        public int? StatusId { get; set; }
+
     }
 }
