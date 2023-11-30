@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\ClientService.cs" />
+    <Compile Remove="Services\Enums.cs" />
+    <Compile Remove="Services\Interfaces\IClientService.cs" />
+    <Compile Remove="Services\Interfaces\ISaleService.cs" />
+    <Compile Remove="Services\SaleService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarlosMto.Entity\CarlosMto.Entity.csproj" />
+    <ProjectReference Include="..\CarlosMto.Infrastructure\CarlosMto.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
